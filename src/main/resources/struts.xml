@@ -1,0 +1,51 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="default" namespace="/" extends="struts-default">
+    	<action name="index" class="abc.web.action.EntryAction" method="index">
+	    	   <result name="success">/WEB-INF/jsp/index.jsp</result>
+    	</action>  
+    	<action name="delete" class="abc.web.action.EntryAction" method="delete">
+	    	   <result name="success" type="redirect">/index</result>
+    	</action> 
+   		<action name="fetchById" class="abc.web.action.EntryAction" method="fetchById">
+    	   <result name="success">/WEB-INF/jsp/update.jsp</result>
+    	    <result name="input">/index.jsp</result>
+   		</action> 	
+   		<action name="update" class="abc.web.action.EntryAction" method="update">
+    	   <result name="success" type="redirect">/index</result>
+    	    <result name="input">/WEB-INF/jsp/update.jsp</result>
+   		</action> 
+   		<action name="addSave" class="abc.web.action.EntryAction" method="addSave">
+   			<result name="success" type="redirect">/index</result>
+    	    <result name="input">/WEB-INF/jsp/add.jsp</result>
+   		</action>
+    	
+    	<!-- <action name="index" class="edocmanagement.web.action.EntryAction" method="index">
+	    	   <result name="success">/WEB-INF/jsp/index.jsp</result>
+    	</action>   
+    	
+    	<action name="delete" class="edocmanagement.web.action.EntryAction" method="delete">
+	    	   <result name="success" type="redirect">index</result>
+    	</action>
+    	   
+    	<action name="fetchById" class="edocmanagement.web.action.EntryAction" method="fetchById">
+	    	   <result name="success">/WEB-INF/jsp/update.jsp</result>
+    	</action>  
+    	
+    	<action name="save" class="edocmanagement.web.action.EntryAction" method="save">
+	    	   <result name="success" type="redirect">index</result>
+	    	   <result name="input">/WEB-INF/jsp/update.jsp</result>
+    	</action>  
+    	
+    	<action name="update" class="edocmanagement.web.action.EntryAction" method="update">
+	    	   <result name="input">/WEB-INF/jsp/update.jsp</result>
+    	</action> 
+    	
+    	<action name="update2" class="edocmanagement.web.action.EntryAction" method="update2">
+	    	   <result name="input">/WEB-INF/jsp/update2.jsp</result>
+    	</action> 
+        -->
+    </package>
+</struts>
