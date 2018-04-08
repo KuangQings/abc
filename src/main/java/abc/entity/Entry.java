@@ -70,6 +70,5 @@ public class Entry {
 	
 	public Entry() {}
 	
-	//傻B小鸿
 	
 }
